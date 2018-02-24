@@ -1,22 +1,22 @@
-#Laravel 5.5 API Authentication Using Passport
+# Laravel 5.5 API Authentication Using Passport
 
-##STEP : 1  Create Laravel Application
+## STEP : 1  Create Laravel Application
 
 >composer create-project --prefer-dist laravel/laravel auth-user
 
-##STEP : 2 To get started, install Passport via the Composer package manager
+## STEP : 2 To get started, install Passport via the Composer package manager
 
 >composer require laravel/passport
 
-##STEP : 3  The Passport service provider registers its own database migration directory with the framework, so you should migrate your database after registering the provider.
+## STEP : 3  The Passport service provider registers its own database migration directory with the framework, so you should migrate your database after registering the provider.
 
 >php artisan migrate
 
-##STEP : 4 Install passport package
+## STEP : 4 Install passport package
 
 >php artisan passport:install
 
-##STEP : 5  Use HasApiTokens in App\User model
+## STEP : 5  Use HasApiTokens in App\User model
 
 ```
 <?php
@@ -32,7 +32,7 @@ class User extends Authenticatable
     use HasApiTokens, Notifiable;
 }
 ```
-##STEP : 6 Call the Passport::routes in boot() on AuthServiceProvider with the help of use Laravel\Passport\Passport;
+## STEP : 6 Call the Passport::routes in boot() on AuthServiceProvider with the help of use Laravel\Passport\Passport;
 
 ```
 <?php
